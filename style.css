@@ -255,7 +255,10 @@ ul {
 .main__content-table_variable {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  /*  */
+  overflow-x: auto;
+  /* был такой */
+  /* overflow: hidden; */
   gap: 24px;
   width: 100%;
 }
@@ -296,7 +299,6 @@ ul {
 .main__information_title h2,
 .main__how-download_main-title h2,
 .main__faq_main-title h2,
-.main__mobile-app_title h2,
 .main__how-use_main-title h2 {
   /* width: 334px; */
   font-size: 32px;
@@ -365,6 +367,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-width: 366px;
 }
 .main__live-betting_content_items {
   display: flex;
@@ -382,8 +385,10 @@ ul {
   line-height: 29.05px;
   color: rgba(255, 125, 52, 1);
 }
-.none-betting {
-  display: none;
+.main__live-betting_items {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
 }
 .main__bonuses {
   background-color: rgba(18, 14, 11, 1);
@@ -460,7 +465,7 @@ ul {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 .main__reviewer {
   min-width: 320px;
@@ -502,7 +507,7 @@ ul {
 .main__download_items {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: auto;
   gap: 24px;
   width: 100%;
 }
@@ -519,7 +524,7 @@ ul {
   justify-content: center;
   align-items: center;
   height: 100px;
-  min-width: 320px;
+  min-width: 319px;
 }
 .main__information {
   background-color: rgba(18, 14, 11, 1);
@@ -639,8 +644,12 @@ ul {
   justify-content: center;
   gap: 20px;
 }
+
 .main__mobile-app_title h2 {
-  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 67.6px;
+  color: rgba(25, 27, 35, 1);
 }
 .main__mobile-app_content ul {
   display: flex;
@@ -671,13 +680,10 @@ ul {
   .container {
     max-width: 991px;
   }
-
   .main__live-betting_items {
-    display: flex;
-    gap: 30px;
     overflow: hidden;
   }
-  .none-betting,
+
   .main__live-betting_buttons {
     display: flex;
   }
@@ -942,11 +948,9 @@ ul {
     display: flex;
     align-items: end;
   }
-  /* .main__reviewers {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-  } */
+  .main__reviewers {
+    overflow-x: hidden;
+  }
   .main__how-download_title h3 {
     font-size: 36px;
     line-height: 46.8px;
