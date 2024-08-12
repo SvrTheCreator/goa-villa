@@ -652,13 +652,13 @@ ul {
   align-items: center;
   gap: 10px;
 }
-/* .main__mobile-app_button,
-.main__how-use_button button {
-  width: 256px;
-} */
-
+.main__bonuses_title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: rgba(252, 253, 254, 1);
+}
 .main__how-use,
-/* .main__reviewer-desktop, */
 .main__indian-league_slider-desktop {
   display: none;
 }
