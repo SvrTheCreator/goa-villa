@@ -24,7 +24,7 @@ ul {
 .header,
 .main,
 .footer {
-  padding: 24px 24px 24px 24px;
+  padding: 0 24px 24px 24px;
 }
 /*  */
 .no-scroll {
@@ -93,6 +93,7 @@ ul {
 }
 /*  */
 .header__menu {
+  padding: 16px 0 16px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,6 +132,9 @@ ul {
 .header__nav li {
   list-style-type: none;
 }
+.header__description_title {
+  padding: 0px 0px 40px 0px;
+}
 .header__button {
   display: none;
   background-color: rgba(253, 240, 234, 1);
@@ -147,10 +151,14 @@ ul {
 .header__stonks {
   grid-area: stonks;
 }
-.header__stonks img {
+.header__stonks img,
+.main__indian-league_phone img,
+.main__betting-app_phone img,
+.main__how-download_item_img img {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
+
 .header__content {
   display: flex;
   flex-direction: column;
@@ -160,6 +168,7 @@ ul {
   grid-area: description;
 }
 .header__description_title h1 {
+  margin: 0;
   padding: 0px 24px 0px 0px;
   width: 382px;
   font-weight: 700;
@@ -190,16 +199,29 @@ ul {
   font-weight: 500;
   font-size: 18px;
   line-height: 28.8px;
+  margin: 0;
 }
+.main__indian-league_content_text p {
+  padding: 0px 0px 48px 0px;
+}
+.main__betting-app_content_text,
+.main__how-download_main-text {
+  padding: 0px 0px 32px 0px;
+}
+
 .main__reasons_text,
 .main__how-use_text,
 .main__faq_text {
   display: none;
+  padding: 24px 0 0 0;
 }
 .main__reasons_text-active,
 .main__how-use_text-active,
 .main__faq_text-active {
   display: block;
+}
+.header__description_button {
+  padding: 40px 0px 0px 0px;
 }
 .header__description_button a,
 .main_live-betting_button a,
@@ -300,10 +322,7 @@ ul {
   border-radius: 32px;
   padding: 48px 24px 48px 24px;
 }
-.main__indian-league_phone img {
-  width: 100%;
-  height: 100%;
-}
+
 .main__indian-league_content_title h2,
 .main__betting-app_content_title h2,
 .main__live-betting_title h2,
@@ -338,10 +357,7 @@ ul {
 .main__betting-app_phone {
   grid-area: phone;
 }
-.main__betting-app_phone img {
-  width: 100%;
-  height: 100%;
-}
+
 .main__betting-app_content {
   grid-area: app-content;
 }
@@ -461,6 +477,7 @@ ul {
   line-height: 31.2px;
   font-weight: 700;
   font-size: 24px;
+  margin-bottom: 0;
 }
 .main__reasons_title h4,
 .main__faq_title h4,
@@ -494,6 +511,7 @@ ul {
     'reviewer-text reviewer-text';
   grid-template-columns: 78px 1fr;
   column-gap: 16px;
+  row-gap: 24px;
 }
 .main__reviewer_avatar {
   grid-area: reviewer-avatar;
@@ -596,9 +614,16 @@ ul {
 .main__how-download_item-content {
   grid-area: item-content;
 }
-.main__how-download_item_img img {
-  width: 100%;
-  height: 100%;
+.main__how-download_item-content {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.main__how-download_item_img {
+  display: flex;
+  align-items: center;
 }
 .main__how-download_item {
   padding: 24px;
@@ -741,8 +766,15 @@ ul {
   .container {
     max-width: 1199px;
   }
+  .header__description {
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
   .main__indian-league .container {
     display: flex;
+    gap: 80px;
   }
   .main__indian-league_phone,
   .main__indian-league_content {
@@ -751,8 +783,8 @@ ul {
     flex-direction: column;
     justify-content: center;
   }
+
   .main__indian-league_content {
-    padding: 10px;
     width: 60%;
   }
   .main__betting-app .container {
@@ -787,6 +819,7 @@ ul {
   } */
   .main__how-download_item {
     display: grid;
+    gap: 20px;
     grid-template-areas: 'img item-content';
     grid-template-columns: 1fr 1fr;
   }
@@ -797,16 +830,17 @@ ul {
   }
   .main__how-download_item-content {
     padding: 10px 10px 10px 10px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 24px; */
   }
   .header__content {
     display: grid;
     grid-template-areas:
       'description stonks stonks'
       'subscribers stonks stonks';
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -814,9 +848,18 @@ ul {
   .container {
     max-width: 1338px;
   }
+  .header__content {
+    grid-template-areas:
+      'description stonks'
+      'subscribers stonks';
+    grid-template-columns: 1fr 1fr;
+  }
 
   .header__burger-menu {
     display: none;
+  }
+  .header__stonks img {
+    height: 100%;
   }
   .header__nav {
     display: flex;
@@ -836,12 +879,7 @@ ul {
       'subscribers stonks';
     grid-template-columns: 1fr 1fr;
   } */
-  .header__description {
-    margin-top: 100px;
-  }
-  .header__description_title {
-    padding: 0px 0px 40px 0px;
-  }
+
   .header__description_title h1 {
     padding: 0;
     width: 100%;
@@ -926,23 +964,7 @@ ul {
   .main__how-download_item-content {
     padding: 0;
   }
-  /* .main__how-download_item {
-    display: grid;
-    gap: 80px;
-    grid-template-areas: 'img item-content';
-    grid-template-columns: 1fr 1fr;
-  }
-  .main__how-download_item-second {
-    display: grid;
-    grid-template-areas: 'item-content img';
-    grid-template-columns: 1fr 1fr;
-  }
-  .main__how-download_item-content {
-    padding: 0 0 0 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  } */
+
   .main__reviewer {
     min-width: 880px;
     padding: 12px 32px 12px 12px;
@@ -979,5 +1001,8 @@ ul {
   }
   .main__indian-league_slider-desktop {
     display: block;
+  }
+  .main__how-download_item_img {
+    align-items: normal;
   }
 }
