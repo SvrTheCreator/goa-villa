@@ -466,6 +466,7 @@ ul {
 .main__faq_title h4,
 .main__how-use_title h4 {
   /* width: 80%; */
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
