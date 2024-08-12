@@ -357,6 +357,7 @@ ul {
   overflow-x: hidden;
   gap: 40px;
   grid-area: indian-text;
+  scroll-behavior: smooth;
 }
 .main__indian-league_content {
   min-width: 100%;
@@ -430,6 +431,7 @@ ul {
   display: flex;
   gap: 30px;
   overflow-x: auto;
+  scroll-behavior: smooth;
 }
 .main__bonuses {
   background-color: rgba(18, 14, 11, 1);
@@ -508,6 +510,7 @@ ul {
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
+  scroll-behavior: smooth;
 }
 .main__reviewer {
   min-width: 320px;
