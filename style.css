@@ -151,12 +151,14 @@ ul {
 .header__stonks {
   grid-area: stonks;
 }
+.main__indian-league_phone {
+  grid-area: indian-phone;
+}
 .header__stonks img,
 .main__indian-league_phone img,
 .main__betting-app_phone img,
 .main__how-download_item_img img {
   width: 100%;
-  /* height: 100%; */
 }
 
 .header__content {
@@ -235,27 +237,11 @@ ul {
   background-color: rgba(255, 125, 52, 1);
   border-radius: 100px;
   height: 60px;
-  /* border: none; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* .header__description_button,
-.main_live-betting_button button, */
-/* .main__reasons_button button, */
-/* .main__how-download_button button, */
-/* .main__mobile-app_button, */
-/* .main__how-use_button button */
-/* {
-  width: 100%;
-  font-size: 18px;
-  color: rgba(252, 253, 254, 1);
-  background-color: rgba(255, 125, 52, 1);
-  font-family: Poppins;
-  border-radius: 100px;
-  height: 60px;
-  border: none;
-} */
+
 .main {
   display: flex;
   flex-direction: column;
@@ -292,10 +278,7 @@ ul {
 .main__content-table_variable {
   display: flex;
   flex-direction: column;
-  /*  */
   overflow-x: auto;
-  /* был такой */
-  /* overflow: hidden; */
   gap: 24px;
   width: 100%;
 }
@@ -346,10 +329,37 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  grid-area: indian-buttons;
+}
+.main__indian-league_content_sliders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.main__indian-league_content_slider-first,
+.main__indian-league_content_slider-second {
+  width: 64px;
+  height: 8px;
+  border-radius: 3.5px;
+  background-color: rgba(198, 198, 208, 1);
+}
+.indian-slider-active {
+  width: 106px;
+  background-color: rgba(255, 125, 52, 1);
 }
 .main__indian-league_content_text-button button {
   border: none;
   background-color: inherit;
+}
+.main__indian-league_items {
+  display: flex;
+  overflow-x: hidden;
+  gap: 40px;
+  grid-area: indian-text;
+}
+.main__indian-league_content {
+  min-width: 100%;
 }
 .main__betting-app_content {
   padding: 0 8px 0 8px;
@@ -482,7 +492,6 @@ ul {
 .main__reasons_title h4,
 .main__faq_title h4,
 .main__how-use_title h4 {
-  /* width: 80%; */
   margin: 0;
   font-weight: 700;
   font-size: 20px;
@@ -768,26 +777,27 @@ ul {
     max-width: 1199px;
   }
   .header__description {
-    /* margin-top: 100px; */
     display: flex;
     flex-direction: column;
     justify-content: end;
   }
   .main__indian-league .container {
-    display: flex;
-    gap: 80px;
+    display: grid;
+    grid-template-areas:
+      'indian-phone indian-text'
+      'indian-phone indian-buttons';
+    column-gap: 80px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main__indian-league_phone {
+    justify-content: center;
   }
   .main__indian-league_phone,
   .main__indian-league_content {
-    width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
 
-  .main__indian-league_content {
-    width: 60%;
-  }
   .main__betting-app .container {
     display: grid;
     grid-template-areas: 'app-content phone';
@@ -815,9 +825,6 @@ ul {
     justify-content: center;
     align-items: center;
   }
-  /* .main__indian-league_content_title h2 {
-    font-size: 24px;
-  } */
   .main__how-download_item {
     display: grid;
     gap: 20px;
@@ -831,10 +838,6 @@ ul {
   }
   .main__how-download_item-content {
     padding: 10px 10px 10px 10px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px; */
   }
   .header__content {
     display: grid;
@@ -873,13 +876,6 @@ ul {
   .main__reviewer-desktop {
     display: grid;
   }
-  /* .header__content {
-    display: grid;
-    grid-template-areas:
-      'description stonks'
-      'subscribers stonks';
-    grid-template-columns: 1fr 1fr;
-  } */
 
   .header__description_title h1 {
     padding: 0;
@@ -1005,5 +1001,12 @@ ul {
   }
   .main__how-download_item_img {
     align-items: normal;
+  }
+  .main__indian-league_content_slider-first,
+  .main__indian-league_content_slider-second {
+    width: 97px;
+  }
+  .indian-slider-active {
+    width: 334px;
   }
 }

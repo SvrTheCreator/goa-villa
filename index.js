@@ -176,3 +176,28 @@ function scrollForReviewers() {
   }
 }
 scrollForReviewers()
+function scrollForIndianLeague() {
+  const divScrollForIndian = document.querySelector(
+    '.main__indian-league_items'
+  )
+  const leftIndianButton = document.querySelector('#indianButtonLeft')
+  const rightIndianButton = document.querySelector('#indianButtonRight')
+  const leftIndianSlider = document.querySelector(
+    '.main__indian-league_content_slider-first'
+  )
+  const rightIndianSlider = document.querySelector(
+    '.main__indian-league_content_slider-second'
+  )
+
+  leftIndianButton.onclick = () => {
+    rightIndianSlider.classList.remove('indian-slider-active')
+    leftIndianSlider.classList.add('indian-slider-active')
+    divScrollForIndian.scrollLeft -= 800
+  }
+  rightIndianButton.onclick = () => {
+    leftIndianSlider.classList.remove('indian-slider-active')
+    rightIndianSlider.classList.add('indian-slider-active')
+    divScrollForIndian.scrollLeft += 800
+  }
+}
+scrollForIndianLeague()
