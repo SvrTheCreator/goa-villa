@@ -4,14 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__menu">
-          <div class="header__logo">
-            <img src="./img/logo.png" alt="" />
+          <div class="header__logo-main">
+            <img src="./img/logo(1).png" alt="" />
           </div>
           <button class="header__burger-menu">
             <img src="./img/burger-menu.png" alt="" />
@@ -24,7 +36,7 @@
             <li><a class="header__item" href="#">Reviews</a></li>
             <li><a class="header__item" href="#">FAQ</a></li>
           </ul>
-          <button class="header__button">Bet Now</button>
+          <a class="header__button">Bet Now</a>
         </div>
         <div class="header__content">
           <div class="header__stonks">
@@ -43,7 +55,7 @@
               </p>
             </div>
             <div class="header__description_button">
-              <button>Bet Now</button>
+              <a>Bet Now</a>
             </div>
           </div>
           <div class="header__subscribers">
@@ -57,25 +69,39 @@
         </div>
       </div>
     </header>
+    <div class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">IPL Download</a></li>
+        <li><a href="#">Bonus</a></li>
+        <li><a href="#">How to use ?</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
     <main class="main">
-      <!-- <div class="container"> -->
       <div class="main__content-table">
         <div class="container">
-          <div class="main__content-table_title">
-            <img src="./img/Title (MOB).png" alt="" />
+          <div class="main__content-table_title-main">
+            <div class="main__content-table_title">Table of Contents</div>
+            <div class="main__content-table_subtitle">Update: 07.05.2024</div>
           </div>
           <div class="main__content-table_variable">
-            <button>Indian Premier League</button>
-            <button>IPL App Download</button>
-            <button>IPL mobile features</button>
-            <button>IPL Cricket Betting</button>
-            <button>Welcome Bonus</button>
-            <button>Reasons to Download</button>
-            <button>How to use ?</button>
-            <button>Reviews</button>
-            <button>Main information</button>
-            <button>IPL prediction app</button>
-            <button>FAQ</button>
+            <div>
+              <a id="indianPremierLeague">Indian Premier League</a>
+              <a id="iplAppDownload">IPL App Download</a>
+              <a id="iplCricketBetting">IPL Cricket Betting</a>
+              <a id="welcomeBonus">Welcome Bonus</a>
+              <a id="reasonsToDownload">Reasons to Download</a>
+            </div>
+            <div>
+              <a id="iplmobilefeatures">IPL mobile features</a>
+              <a id="howToUse">How to use ?</a>
+              <a id="reviews">Reviews</a>
+              <a id="mainInformation">Main information</a>
+              <a id="iplPredictionApp">IPL prediction app</a>
+              <a id="faq">FAQ</a>
+            </div>
           </div>
         </div>
       </div>
@@ -102,7 +128,16 @@
                   <img src="./img/left-button.png" alt="" />
                 </button>
                 <button>
-                  <img src="./img/slider.png" alt="" />
+                  <img
+                    class="main__indian-league_slider"
+                    src="./img/slider.png"
+                    alt=""
+                  />
+                  <img
+                    class="main__indian-league_slider-desktop"
+                    src="./img/slider-desktop.png"
+                    alt=""
+                  />
                 </button>
                 <button>
                   <img src="./img/right-button.png" alt="" />
@@ -134,12 +169,12 @@
               </p>
             </div>
             <div class="main__betting-app_content_apps">
-              <div>
+              <a class="main__betting-app_content_apps_google-play">
                 <img src="./img/Google_Play_Store_badge_EN.png" alt="" />
-              </div>
-              <div>
+              </a>
+              <a class="main__betting-app_content_apps_app-store">
                 <img src="./img/Download_on_the_App_Store_Badge.png" alt="" />
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -149,48 +184,147 @@
           <div class="main__live-betting_title">
             <h2>IPL Live Cricket Betting</h2>
             <div class="main__live-betting_buttons">
-              <button><img src="./img/left-desktop.png" alt="" /></button>
-              <button><img src="./img/right-desktop.png" alt="" /></button>
+              <button class="main__live-betting_left-button">
+                <img src="./img/left-desktop.png" alt="" />
+              </button>
+              <button class="main__live-betting_right-button">
+                <img src="./img/right-desktop.png" alt="" />
+              </button>
             </div>
           </div>
-          <div class="main__live-betting_items">
-            <div class="main__live-betting_content">
-              <div class="main__live-betting_content_title">
-                <img src="./img/live-betting.png" alt="" />
+          <div class="main__live-betting_all-items">
+            <div class="main__live-betting_items">
+              <div class="main__live-betting_content">
+                <div class="main__live-betting_content_main-title">
+                  <div class="main__live-betting_content_title">
+                    Rajiv Gandhi International Stadium, Hyderabad
+                  </div>
+                  <div class="main__live-betting_content_date">
+                    <span class="main__live-betting_content-day">
+                      Sunday, May 19
+                    </span>
+                    <span class="main__live-betting_content-time">
+                      17:30 pm IST
+                    </span>
+                  </div>
+                  <!-- <img src="./img/live-betting.png" alt="" /> -->
+                </div>
+                <div class="main__live-betting_content_items">
+                  <div class="main__live-betting_content_first-team">
+                    <div><img src="./img/team.png" alt="" /></div>
+                    <div>
+                      <div class="main__live-betting_content_team-name">
+                        Sunreser Hyderabad
+                      </div>
+                      <div class="main__live-betting_content_team-score">
+                        (19.1 OV)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main__live-betting_content_versus">VS</div>
+                  <div class="main__live-betting_content_second-team">
+                    <div><img src="./img/team.png" alt="" /></div>
+                    <div>
+                      <div class="main__live-betting_content_team-name">
+                        Rajasthan Royals
+                      </div>
+                      <div class="main__live-betting_content_team-score">
+                        (19.1 OV)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main_live-betting_button">
+                  <a>Bet Now</a>
+                </div>
               </div>
-              <div class="main__live-betting_content_items">
-                <div><img src="./img/sunreser.png" alt="" /></div>
-                <div><img src="./img/vs.png" alt="" /></div>
-                <div><img src="./img/rajasthan.png" alt="" /></div>
+              <div class="main__live-betting_content none-betting">
+                <div class="main__live-betting_content_main-title">
+                  <div class="main__live-betting_content_title">
+                    Wankhede Stadium, Mumbai
+                  </div>
+                  <div class="main__live-betting_content_date">
+                    <span class="main__live-betting_content-day">
+                      Monday, May 20
+                    </span>
+                    <span class="main__live-betting_content-time">
+                      20:30 pm IST
+                    </span>
+                  </div>
+                  <!-- <img src="./img/live-betting.png" alt="" /> -->
+                </div>
+                <div class="main__live-betting_content_items">
+                  <div class="main__live-betting_content_first-team">
+                    <div><img src="./img/team.png" alt="" /></div>
+                    <div>
+                      <div class="main__live-betting_content_team-name">
+                        Sunreser Hyderabad
+                      </div>
+                      <div class="main__live-betting_content_team-score">
+                        (19.1 OV)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main__live-betting_content_versus">VS</div>
+                  <div class="main__live-betting_content_second-team">
+                    <div><img src="./img/team.png" alt="" /></div>
+                    <div>
+                      <div class="main__live-betting_content_team-name">
+                        Rajasthan Royals
+                      </div>
+                      <div class="main__live-betting_content_team-score">
+                        (19.1 OV)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main_live-betting_button">
+                  <a>Bet Now</a>
+                </div>
               </div>
-              <div class="main_live-betting_button">
-                <button>Bet Now</button>
-              </div>
-            </div>
-            <div class="main__live-betting_content none-betting">
-              <div class="main__live-betting_content_title">
-                <img src="./img/live-betting.png" alt="" />
-              </div>
-              <div class="main__live-betting_content_items">
-                <div><img src="./img/sunreser.png" alt="" /></div>
-                <div><img src="./img/vs.png" alt="" /></div>
-                <div><img src="./img/rajasthan.png" alt="" /></div>
-              </div>
-              <div class="main_live-betting_button">
-                <button>Bet Now</button>
-              </div>
-            </div>
-            <div class="main__live-betting_content none-betting">
-              <div class="main__live-betting_content_title">
-                <img src="./img/live-betting.png" alt="" />
-              </div>
-              <div class="main__live-betting_content_items">
-                <div><img src="./img/sunreser.png" alt="" /></div>
-                <div><img src="./img/vs.png" alt="" /></div>
-                <div><img src="./img/rajasthan.png" alt="" /></div>
-              </div>
-              <div class="main_live-betting_button">
-                <button>Bet Now</button>
+              <div class="main__live-betting_content none-betting">
+                <div class="main__live-betting_content_main-title">
+                  <div class="main__live-betting_content_title">
+                    Wankhede Stadium, Mumbai
+                  </div>
+                  <div class="main__live-betting_content_date">
+                    <span class="main__live-betting_content-day">
+                      Monday, May 20
+                    </span>
+                    <span class="main__live-betting_content-time">
+                      20:30 pm IST
+                    </span>
+                  </div>
+                  <!-- <img src="./img/live-betting.png" alt="" /> -->
+                </div>
+                <div class="main__live-betting_content_items">
+                  <div class="main__live-betting_content_first-team">
+                    <div><img src="./img/team.png" alt="" /></div>
+                    <div>
+                      <div class="main__live-betting_content_team-name">
+                        Chennai Super Kings
+                      </div>
+                      <div class="main__live-betting_content_team-score">
+                        (19.1 OV)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main__live-betting_content_versus">VS</div>
+                  <div class="main__live-betting_content_second-team">
+                    <div><img src="./img/team.png" alt="" /></div>
+                    <div>
+                      <div class="main__live-betting_content_team-name">
+                        Royal Challengers
+                      </div>
+                      <div class="main__live-betting_content_team-score">
+                        (19.1 OV)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main_live-betting_button">
+                  <a>Bet Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -266,9 +400,11 @@
           <div class="main__reasons_item">
             <div class="main__reasons_title">
               <div>Cricket Betting App without your browser</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="reasonsButtonOne">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__reasons_text">
+            <div id="forReasonsButtonOne" class="main__reasons_text">
               <p>
                 You can place the bets and see the result with just a few
                 touches. Just open the app, select the match, choose your
@@ -279,9 +415,11 @@
           <div class="main__reasons_item">
             <div class="main__reasons_title">
               <div>Only Phone Needed</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="reasonsButtonTwo">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__reasons_text">
+            <div id="forReasonsButtonTwo" class="main__reasons_text">
               <p>
                 Download the app free on the Google Play Store or AppStore and
                 you are ready to go. All you need is just a smartphone. You
@@ -292,9 +430,11 @@
           <div class="main__reasons_item">
             <div class="main__reasons_title">
               <div>Easy to track your balance</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="reasonsButtonThree">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__reasons_text">
+            <div id="forReasonsButtonThree" class="main__reasons_text">
               <p>
                 Download, install, and open the app. Inside, you will find all
                 the stats, tips, and match predictions. You can track and make
@@ -305,9 +445,11 @@
           <div class="main__reasons_item">
             <div class="main__reasons_title">
               <div>Bets at any time</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="reasonsButtonFour">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__reasons_text">
+            <div id="forReasonsButtonFour" class="main__reasons_text">
               <p>
                 You can place your bets and see the outcome anytime you want and
                 from anywhere. It is super convenient. Betting on your favorite
@@ -316,7 +458,7 @@
             </div>
           </div>
           <div class="main__reasons_button">
-            <button>Learn more</button>
+            <a>Learn more</a>
           </div>
         </div>
       </div>
@@ -356,7 +498,7 @@
                 >
               </li>
             </ul>
-            <button class="main__mobile-app_button">Bet Now</button>
+            <a class="main__mobile-app_button">Bet Now</a>
           </div>
         </div>
       </div>
@@ -368,9 +510,11 @@
           <div class="main__how-use_item">
             <div class="main__how-use_title">
               <div>How to sign up in the app?</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="how-use_button-1">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__how-use_text">
+            <div id="forHow-use_button-1" class="main__how-use_text">
               <p>
                 Click on the app. Next, fill out the two-step registration form.
                 Enter your phone number and create your password. A code will be
@@ -382,9 +526,11 @@
           <div class="main__how-use_item">
             <div class="main__how-use_title">
               <div>How to deposit money in the app?</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="how-use_button-2">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__how-use_text">
+            <div id="forHow-use_button-2" class="main__how-use_text">
               <p>
                 You can deposit cash in various ways. Use your Mastercard or
                 Visa. You can also use Astropay, MuchBetter, and
@@ -397,9 +543,11 @@
           <div class="main__how-use_item">
             <div class="main__how-use_title">
               <div>How to find IPL matches to bet?</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="how-use_button-3">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__how-use_text">
+            <div id="forHow-use_button-3" class="main__how-use_text">
               <p>
                 There are many sections where you can find the matches and place
                 your bets. There is a Live Bet section on the main screen. You
@@ -410,7 +558,7 @@
             </div>
           </div>
           <div class="main__how-use_button">
-            <button>Learn more</button>
+            <a>Learn more</a>
           </div>
         </div>
       </div>
@@ -419,8 +567,12 @@
           <div class="main__reviews_title">
             <h2>IPL Betting App Reviews</h2>
             <div class="main__reviews_buttons">
-              <button><img src="./img/left-desktop.png" alt="" /></button>
-              <button><img src="./img/right-desktop.png" alt="" /></button>
+              <button id="main__reviews_leftButton">
+                <img src="./img/left-desktop.png" alt="" />
+              </button>
+              <button id="main__reviews_rightButton">
+                <img src="./img/right-desktop.png" alt="" />
+              </button>
             </div>
           </div>
           <div class="main__reviewers">
@@ -428,8 +580,16 @@
               <div class="main__reviewer_avatar">
                 <img src="./img/reviewer (2).png" alt="" />
               </div>
-              <div class="main__reviewer_name">
-                <img src="./img/reviewer-name.png" alt="" />
+              <div class="main__reviewer_name-grade">
+                <div class="main__reviewer_name">Rajesh K</div>
+                <div class="main__reviewer_grade">
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 25.png" alt="" />
+                </div>
+                <!-- <img src="./img/reviewer-name.png" alt="" /> -->
               </div>
               <div class="main__reviewer_text">
                 <p>
@@ -443,8 +603,16 @@
               <div class="main__reviewer_avatar">
                 <img src="./img/reviewer (3).png" alt="" />
               </div>
-              <div class="main__reviewer_name">
-                <img src="./img/reviewer-name-2.png" alt="" />
+              <div class="main__reviewer_name-grade">
+                <div class="main__reviewer_name">Priya S</div>
+                <div class="main__reviewer_grade">
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 21.png" alt="" />
+                  <img src="./img/Star 25.png" alt="" />
+                </div>
+                <!-- <img src="./img/reviewer-name-2.png" alt="" /> -->
               </div>
               <div class="main__reviewer_text">
                 <p>
@@ -464,30 +632,34 @@
             <h2>Download IPL win app for Android & IOS</h2>
           </div>
           <div class="main__download_items">
-            <a href="#" class="main__download_item">
-              <img src="./img/huawei-2.png" alt="" />
-            </a>
-            <a href="#" class="main__download_item">
-              <img src="./img/samsung 1.png" alt="" />
-            </a>
-            <a href="#" class="main__download_item">
-              <img src="./img/LG_logo_(2014) 1.png" alt="" />
-            </a>
-            <a href="#" class="main__download_item">
-              <img src="./img/huawei-honor-logo.png" alt="" />
-            </a>
-            <a href="#" class="main__download_item">
-              <img src="./img/xiaomi.svg" alt="" />
-            </a>
-            <a href="#" class="main__download_item">
-              <img src="./img/apple-11 1.png" alt="" />
-            </a>
-            <a href="#" class="main__download_item">
-              <img src="./img/vivo-2 1.png" alt="" />
-            </a>
-            <a href="#" class="main__download_item">
-              <img src="./img/htc 1.png" alt="" />
-            </a>
+            <div>
+              <a href="#" class="main__download_item">
+                <img src="./img/huawei-2.png" alt="" />
+              </a>
+              <a href="#" class="main__download_item">
+                <img src="./img/samsung 1.png" alt="" />
+              </a>
+              <a href="#" class="main__download_item">
+                <img src="./img/LG_logo_(2014) 1.png" alt="" />
+              </a>
+              <a href="#" class="main__download_item">
+                <img src="./img/huawei-honor-logo.png" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#" class="main__download_item">
+                <img src="./img/xiaomi.svg" alt="" />
+              </a>
+              <a href="#" class="main__download_item">
+                <img src="./img/apple-11 1.png" alt="" />
+              </a>
+              <a href="#" class="main__download_item">
+                <img src="./img/vivo-2 1.png" alt="" />
+              </a>
+              <a href="#" class="main__download_item">
+                <img src="./img/htc 1.png" alt="" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -573,7 +745,7 @@
                   </p>
                 </div>
                 <div class="main__how-download_button">
-                  <button>Bet Now</button>
+                  <a>Bet Now</a>
                 </div>
               </div>
             </div>
@@ -592,7 +764,7 @@
                   </p>
                 </div>
                 <div class="main__how-download_button">
-                  <button>Bet Now</button>
+                  <a>Bet Now</a>
                 </div>
               </div>
             </div>
@@ -607,9 +779,11 @@
           <div class="main__faq_item">
             <div class="main__faq_title">
               <div>How to sign up in the app?</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="faqButtonOne">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__faq_text">
+            <div id="forFaqButtonOne" class="main__faq_text">
               <p>
                 Click on the app. Next, fill out the two-step registration form.
                 Enter your phone number and create your password. A code will be
@@ -621,9 +795,11 @@
           <div class="main__faq_item">
             <div class="main__faq_title">
               <div>How to sign up in the app?</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="faqButtonTwo">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__faq_text">
+            <div id="forFaqButtonTwo" class="main__faq_text">
               <p>
                 Click on the app. Next, fill out the two-step registration form.
                 Enter your phone number and create your password. A code will be
@@ -635,9 +811,11 @@
           <div class="main__faq_item">
             <div class="main__faq_title">
               <div>How to sign up in the app?</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="faqButtonThree">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__faq_text">
+            <div id="forFaqButtonThree" class="main__faq_text">
               <p>
                 Click on the app. Next, fill out the two-step registration form.
                 Enter your phone number and create your password. A code will be
@@ -649,9 +827,11 @@
           <div class="main__faq_item">
             <div class="main__faq_title">
               <div>How to sign up in the app?</div>
-              <button><img src="./img/majesticons_plus.png" alt="" /></button>
+              <button id="faqButtonFour">
+                <img src="./img/majesticons_plus.png" alt="" />
+              </button>
             </div>
-            <div class="main__faq_text">
+            <div id="forFaqButtonFour" class="main__faq_text">
               <p>
                 Click on the app. Next, fill out the two-step registration form.
                 Enter your phone number and create your password. A code will be
@@ -662,7 +842,6 @@
           </div>
         </div>
       </div>
-      <!-- </div> -->
     </main>
     <footer class="footer">
       <div class="container">
@@ -699,5 +878,6 @@
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

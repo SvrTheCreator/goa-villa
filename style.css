@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Roboto;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   margin: 0 auto;
@@ -26,6 +26,72 @@ ul {
 .footer {
   padding: 24px 24px 24px 24px;
 }
+/*  */
+.no-scroll {
+  overflow: hidden;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: -150%;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0px 15px 0px 15px;
+  background: #45927fe5;
+  transition: all 0.2s ease-in;
+  font-size: 16px;
+}
+.nav-icon-cancel {
+  display: none;
+}
+.nav-icon {
+  display: none;
+}
+.nav-active {
+  display: block;
+}
+.nav {
+  font-size: 18px;
+}
+.nav__list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.mobile-nav--open {
+  top: 80px;
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 20px 0;
+  row-gap: 20px;
+  font-size: 16px;
+}
+.mobile-nav__list a {
+  color: white;
+}
+@media (min-width: 768px) {
+  .mobile-nav__list {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+/*  */
 .header__menu {
   display: flex;
   justify-content: space-between;
@@ -60,8 +126,8 @@ ul {
   font-size: 18px;
   font-weight: 600;
   line-height: 21.6px;
-  font-family: Poppins;
-  border: none;
+  align-items: center;
+  justify-content: center;
 }
 .header__stonks {
   grid-area: stonks;
@@ -89,6 +155,7 @@ ul {
 .header__subscribers {
   grid-area: subscribers;
   width: 100%;
+  align-items: center;
 }
 .header__description_text-betting p,
 .header__subscribers_text p,
@@ -101,19 +168,48 @@ ul {
 .main__how-download_main-text p,
 .main__how-download_text p,
 .main__mobile-app_text p,
-.main__how-use_text p {
-  font-family: Inter;
+.main__how-use_text p,
+.main__faq_text p {
+  font-family: 'Inter', sans-serif;
   color: rgba(117, 118, 127, 1);
   font-weight: 500;
   font-size: 18px;
   line-height: 28.8px;
 }
-.header__description_button button,
-.main_live-betting_button button,
-.main__reasons_button button,
-.main__how-download_button button,
+.main__reasons_text,
+.main__how-use_text,
+.main__faq_text {
+  display: none;
+}
+.main__reasons_text-active,
+.main__how-use_text-active,
+.main__faq_text-active {
+  display: block;
+}
+.header__description_button a,
+.main_live-betting_button a,
+.main__reasons_button a,
 .main__mobile-app_button,
-.main__how-use_button button {
+.main__how-use_button a,
+.main__how-download_button a {
+  width: 100%;
+  font-size: 18px;
+  color: rgba(252, 253, 254, 1);
+  background-color: rgba(255, 125, 52, 1);
+  border-radius: 100px;
+  height: 60px;
+  /* border: none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .header__description_button,
+.main_live-betting_button button, */
+/* .main__reasons_button button, */
+/* .main__how-download_button button, */
+/* .main__mobile-app_button, */
+/* .main__how-use_button button */
+/* {
   width: 100%;
   font-size: 18px;
   color: rgba(252, 253, 254, 1);
@@ -122,33 +218,64 @@ ul {
   border-radius: 100px;
   height: 60px;
   border: none;
-}
-/* .main .container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 } */
 .main {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+.main__content-table_title-main {
+  padding: 0px 0px 24px 0px;
+}
+
+.main__content-table_title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46.8px;
+}
+.main__live-betting_content {
+  min-width: 366px;
+}
+.main__live-betting_content_title,
+.main__live-betting_content_team-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: rgba(25, 27, 35, 1);
+}
+.main__content-table_subtitle,
+.main__live-betting_content_date,
+.main__live-betting_content_team-score {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22.4px;
+  color: rgba(117, 118, 127, 1);
+}
 .main__content-table_variable {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 24px;
   width: 100%;
 }
-.main__content-table_variable button {
+.main__content-table_variable :last-child,
+.main__content-table_variable :first-child {
+  display: flex;
+  gap: 14px;
+}
+.main__content-table_variable a {
+  white-space: nowrap;
+  width: 100%;
   background-color: rgba(243, 244, 245, 1);
   height: 60px;
   padding: 0px 44px 0px 44px;
   border-radius: 100px;
-  border: none;
   font-weight: 600;
   line-height: 19.2px;
-  font-family: Poppins;
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main__indian-league {
   background-color: rgba(243, 244, 245, 1);
@@ -171,12 +298,13 @@ ul {
 .main__faq_main-title h2,
 .main__mobile-app_title h2,
 .main__how-use_main-title h2 {
-  width: 334px;
+  /* width: 334px; */
   font-size: 32px;
   font-weight: 700;
   line-height: 41.6px;
   color: rgba(25, 27, 35, 1);
 }
+
 .main__indian-league_content_text-button {
   display: flex;
   align-items: center;
@@ -200,12 +328,20 @@ ul {
 .main__betting-app_content {
   grid-area: app-content;
 }
-.main__betting-app_content_apps div img {
-  width: 100%;
-  height: 100%;
+.main__betting-app_content_apps_google-play,
+.main__betting-app_content_apps_google-play img {
+  width: 172.99px;
+  height: 64px;
 }
+.main__betting-app_content_apps_app-store,
+.main__betting-app_content_apps_app-store img {
+  width: 170.62px;
+  height: 61.13px;
+}
+
 .main__betting-app_content_apps {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .main__live-betting_buttons,
@@ -214,6 +350,14 @@ ul {
   justify-content: center;
   display: none;
 }
+.main__live-betting_content_main-title {
+  min-height: 76px;
+}
+.main__live-betting_content_first-team,
+.main__live-betting_content_second-team {
+  display: flex;
+  gap: 20px;
+}
 .main__live-betting_content {
   padding: 40px 32px 40px 32px;
   background-color: rgba(243, 244, 245, 1);
@@ -221,6 +365,22 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.main__live-betting_content_items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main__live-betting_content_versus {
+  position: relative;
+  top: 0;
+  left: 2%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 29.05px;
+  color: rgba(255, 125, 52, 1);
 }
 .none-betting {
   display: none;
@@ -272,11 +432,20 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+.main__how-download_title h2 {
+  line-height: 41.6px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.main__how-download_title h3 {
+  line-height: 31.2px;
+  font-weight: 700;
+  font-size: 24px;
+}
 .main__reasons_title div,
 .main__faq_title div,
-.main__how-use_title div,
-.main__how-download_title h3 {
-  width: 80%;
+.main__how-use_title div {
+  /* width: 80%; */
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -287,16 +456,23 @@ ul {
   border: none;
   background-color: inherit;
 }
+.main__reviewers {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: hidden;
+}
 .main__reviewer {
+  min-width: 320px;
   background-color: rgba(243, 244, 245, 1);
   border-radius: 24px;
   padding: 24px;
-
   display: grid;
   grid-template-areas:
-    'reviewer-avatar reviewer-name'
+    'reviewer-avatar reviewer-name-grade'
     'reviewer-text reviewer-text';
-  grid-template-columns: 88px 1fr;
+  grid-template-columns: 78px 1fr;
+  column-gap: 16px;
 }
 .main__reviewer_avatar {
   grid-area: reviewer-avatar;
@@ -307,8 +483,18 @@ ul {
   width: 78px;
   height: 92px;
 }
+.main__reviewer_name-grade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  grid-area: reviewer-name-grade;
+}
 .main__reviewer_name {
-  grid-area: reviewer-name;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: rgba(25, 27, 35, 1);
 }
 .main__reviewer_text {
   grid-area: reviewer-text;
@@ -316,8 +502,16 @@ ul {
 .main__download_items {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  gap: 24px;
+  width: 100%;
+}
+.main__download_items div:first-child,
+.main__download_items div:last-child {
+  display: flex;
   gap: 20px;
 }
+
 .main__download_item {
   background-color: rgba(243, 244, 245, 1);
   border-radius: 24px;
@@ -325,6 +519,7 @@ ul {
   justify-content: center;
   align-items: center;
   height: 100px;
+  min-width: 320px;
 }
 .main__information {
   background-color: rgba(18, 14, 11, 1);
@@ -395,6 +590,10 @@ ul {
   font-weight: 700;
   line-height: 67.6px;
 }
+.footer,
+.main__faq_text p {
+  font-family: 'Inter', sans-serif;
+}
 .footer {
   background-color: rgba(26, 25, 25, 1);
   height: 134px;
@@ -413,7 +612,6 @@ ul {
 .footer__social_text {
   font-weight: 500;
   line-height: 21.76px;
-  font-family: Inter;
   color: rgba(117, 118, 127, 1);
 }
 .footer__variable_items {
@@ -454,18 +652,26 @@ ul {
   align-items: center;
   gap: 10px;
 }
-.main__mobile-app_button,
+/* .main__mobile-app_button,
 .main__how-use_button button {
   width: 256px;
-}
+} */
+
 .main__how-use,
-.main__reviewer-desktop {
+/* .main__reviewer-desktop, */
+.main__indian-league_slider-desktop {
   display: none;
+}
+@media (min-width: 431px) {
+  .container {
+    max-width: 767px;
+  }
 }
 @media (min-width: 768px) {
   .container {
     max-width: 991px;
   }
+
   .main__live-betting_items {
     display: flex;
     gap: 30px;
@@ -498,69 +704,34 @@ ul {
     border: none;
     background-color: inherit;
   }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-  .header__burger-menu {
-    display: none;
-  }
-  .header__nav {
-    display: flex;
-    gap: 25px;
-  }
-  .header__button,
-  .main__mobile-app,
-  .main__how-use {
-    display: block;
-  }
-  .main__reviewer-desktop {
-    display: grid;
-  }
-  .header__content {
-    display: grid;
-    grid-template-areas:
-      'description stonks'
-      'subscribers stonks';
-    grid-template-columns: 1fr 1fr;
-  }
-  .header__description {
-    margin-top: 100px;
-  }
-  .header__description_title {
-    padding: 0px 0px 40px 0px;
-  }
-  .header__description_title h1 {
-    padding: 0;
-    width: 100%;
-  }
-  .header__description_button button {
+  .header__description_button a,
+  .main__reasons_button a,
+  .main__how-download_button a,
+  .main__mobile-app_button,
+  .main__how-use_button button,
+  .main__reasons_button button,
+  .main__how-download_button button,
+  .main__how-use_button a {
     width: 256px;
   }
-  .header__subscribers,
-  .footer__variable_items,
-  /* .main__live-betting_buttons, */
-  .main__reviews_buttons,
+}
+@media (min-width: 900px) {
+  .container {
+    max-width: 1199px;
+  }
   .main__indian-league .container {
     display: flex;
   }
-
   .main__indian-league_phone,
   .main__indian-league_content {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
   .main__indian-league_content {
-    padding: 50px;
-  }
-  .main__live-betting_title h2,
-  .main__reviews_title h2 {
-    width: 80%;
+    padding: 10px;
+    width: 60%;
   }
   .main__betting-app .container {
     display: grid;
@@ -574,10 +745,112 @@ ul {
     justify-content: center;
     padding: 0 40px 0 0;
   }
-  .main__live-betting_content_items {
+  .main__betting-app_content_apps_google-play,
+  .main__betting-app_content_apps_google-play img {
+    width: 215.99px;
+    height: 64px;
+  }
+  .main__betting-app_content_apps_app-store,
+  .main__betting-app_content_apps_app-store img {
+    width: 213.03px;
+    height: 61.13px;
+  }
+  .main__betting-app_phone {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+  }
+  /* .main__indian-league_content_title h2 {
+    font-size: 24px;
+  } */
+  .main__how-download_item {
+    display: grid;
+    grid-template-areas: 'img item-content';
+    grid-template-columns: 1fr 1fr;
+  }
+  .main__how-download_item-second {
+    display: grid;
+    grid-template-areas: 'item-content img';
+    grid-template-columns: 1fr 1fr;
+  }
+  .main__how-download_item-content {
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header__content {
+    display: grid;
+    grid-template-areas:
+      'description stonks stonks'
+      'subscribers stonks stonks';
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1338px;
+  }
+
+  .header__burger-menu {
+    display: none;
+  }
+  .header__nav {
+    display: flex;
+    gap: 25px;
+  }
+  .main__mobile-app,
+  .main__how-use {
+    display: block;
+  }
+  .main__reviewer-desktop {
+    display: grid;
+  }
+  /* .header__content {
+    display: grid;
+    grid-template-areas:
+      'description stonks'
+      'subscribers stonks';
+    grid-template-columns: 1fr 1fr;
+  } */
+  .header__description {
+    margin-top: 100px;
+  }
+  .header__description_title {
+    padding: 0px 0px 40px 0px;
+  }
+  .header__description_title h1 {
+    padding: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 64px;
+  }
+  .header__subscribers,
+  .footer__variable_items,
+  .main__reviews_buttons,
+  .header__button {
+    display: flex;
+  }
+
+  .main__live-betting_title h2,
+  .main__reviews_title h2 {
+    width: 80%;
+  }
+  .main__live-betting_content {
+    min-width: 520px;
+  }
+  .main__indian-league_content {
+    padding: 50px;
+  }
+  .main__live-betting_content_items {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main__live-betting_content_versus {
+    top: 0;
+    left: -2%;
   }
 
   .main__reviews_buttons button {
@@ -603,11 +876,6 @@ ul {
     flex-direction: row;
   }
 
-  .main__betting-app_phone {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .main__reasons .container {
     display: flex;
     justify-content: center;
@@ -623,14 +891,7 @@ ul {
     align-items: center;
     justify-content: center;
   }
-  .main__reasons_button button {
-    width: 256px;
-  }
-  .main__download_items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
+
   .main__information_title h2 {
     width: 100%;
   }
@@ -638,7 +899,14 @@ ul {
     padding: 64px 52px 64px 52px;
   }
   .main__how-download_item {
+    gap: 80px;
+  }
+  .main__how-download_item-content {
+    padding: 0;
+  }
+  /* .main__how-download_item {
     display: grid;
+    gap: 80px;
     grid-template-areas: 'img item-content';
     grid-template-columns: 1fr 1fr;
   }
@@ -652,17 +920,18 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  .main__how-download_button button {
-    width: 256px;
-  }
+  } */
   .main__reviewer {
+    min-width: 880px;
     padding: 12px 32px 12px 12px;
     column-gap: 32px;
     grid-template-areas:
-      'reviewer-avatar reviewer-name'
+      'reviewer-avatar reviewer-name-grade'
       'reviewer-avatar reviewer-text';
     grid-template-columns: 270px 432px;
+  }
+  .main__reviewer_name-grade {
+    justify-content: end;
   }
   .main__reviewer_avatar,
   .main__reviewer_avatar img {
@@ -673,9 +942,22 @@ ul {
     display: flex;
     align-items: end;
   }
-  .main__reviewers {
+  /* .main__reviewers {
     display: flex;
     gap: 20px;
     overflow: hidden;
+  } */
+  .main__how-download_title h3 {
+    font-size: 36px;
+    line-height: 46.8px;
+  }
+  .main__indian-league_content_text-button {
+    justify-content: space-between;
+  }
+  .main__indian-league_slider {
+    display: none;
+  }
+  .main__indian-league_slider-desktop {
+    display: block;
   }
 }
