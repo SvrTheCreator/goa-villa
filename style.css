@@ -900,9 +900,9 @@ ul {
   .main__live-betting_content {
     min-width: 520px;
   }
-  .main__indian-league_content {
+  /* .main__indian-league_content {
     padding: 50px;
-  }
+  } */
   .main__live-betting_content_items {
     flex-direction: row;
     justify-content: space-between;
@@ -1011,5 +1011,19 @@ ul {
   }
   .indian-slider-active {
     width: 334px;
+  }
+  .main__indian-league_content_title h2,
+  .main__betting-app_content_title h2,
+  .main__live-betting_title h2,
+  .main__reasons_main-title h2,
+  .main__reviews_title h2,
+  .main__download_title h2,
+  .main__bonus_title h2,
+  .main__information_title h2,
+  .main__how-download_main-title h2,
+  .main__faq_main-title h2,
+  .main__how-use_main-title h2 {
+    font-size: 52px;
+    line-height: 67.6px;
   }
 }
