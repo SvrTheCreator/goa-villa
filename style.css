@@ -101,6 +101,7 @@ ul {
   display: flex;
   align-items: center;
 }
+
 .header__logo {
   display: flex;
   align-items: center;
@@ -461,9 +462,9 @@ ul {
   font-weight: 700;
   font-size: 24px;
 }
-.main__reasons_title div,
-.main__faq_title div,
-.main__how-use_title div {
+.main__reasons_title h4,
+.main__faq_title h4,
+.main__how-use_title h4 {
   /* width: 80%; */
   font-weight: 700;
   font-size: 20px;
