@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- swiper test -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--  -->
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans+Caption&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
     <title>Document</title>
   </head>
   <body>
@@ -29,16 +36,43 @@
             </div>
           </div>
           <button class="header__burger-menu">
-            <img src="./img/burger-menu.png" alt="" />
+            <!-- <img src="./img/burger-menu.png" alt="" /> -->
+            <svg
+              width="32"
+              height="26"
+              viewBox="0 0 32 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect y="0.5" width="32" height="3" rx="1.5" fill="#75767F" />
+              <rect y="11.5" width="32" height="3" rx="1.5" fill="#75767F" />
+              <rect y="22.5" width="32" height="3" rx="1.5" fill="#75767F" />
+            </svg>
           </button>
-          <ul class="header__nav">
-            <li><a class="header__item active" href="#">Home</a></li>
-            <li><a class="header__item" href="#">IPL Download</a></li>
-            <li><a class="header__item" href="#">Bonus</a></li>
-            <li><a class="header__item" href="#">How to use ?</a></li>
-            <li><a class="header__item" href="#">Reviews</a></li>
-            <li><a class="header__item" href="#">FAQ</a></li>
-          </ul>
+          <nav>
+            <ul class="header__nav">
+              <li>
+                <a id="headerHome" class="header__item" href="#">Home</a>
+              </li>
+              <li>
+                <a id="headerDownload" class="header__item" href="#"
+                  >IPL Download</a
+                >
+              </li>
+              <li>
+                <a id="headerBonus" class="header__item" href="#">Bonus</a>
+              </li>
+              <li>
+                <a id="headerHowToUse" class="header__item" href="#"
+                  >How to use ?</a
+                >
+              </li>
+              <li>
+                <a id="headerReviews" class="header__item" href="#">Reviews</a>
+              </li>
+              <li><a id="headerFaq" class="header__item" href="#">FAQ</a></li>
+            </ul>
+          </nav>
           <a class="header__button">Bet Now</a>
         </div>
         <div class="header__content">
@@ -72,16 +106,16 @@
         </div>
       </div>
     </header>
-    <div class="mobile-nav">
+    <nav class="mobile-nav">
       <ul class="mobile-nav__list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">IPL Download</a></li>
-        <li><a href="#">Bonus</a></li>
-        <li><a href="#">How to use ?</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a id="mobileHeaderHome" href="#">Home</a></li>
+        <li><a id="mobileHeaderIplDownload" href="#">IPL Download</a></li>
+        <li><a id="mobileHeaderBonus" href="#">Bonus</a></li>
+        <li><a id="mobileHeaderHowToUse" href="#">How to use ?</a></li>
+        <li><a id="mobileHeaderReviews" href="#">Reviews</a></li>
+        <li><a id="mobileHeaderFaq" href="#">FAQ</a></li>
       </ul>
-    </div>
+    </nav>
     <main class="main">
       <div class="main__content-table">
         <div class="container">
@@ -400,9 +434,9 @@
             <h2>Reasons to Download IPL App</h2>
           </div>
           <div class="main__reasons_item">
-            <div class="main__reasons_title">
+            <div id="reasonsButtonOne" class="main__reasons_title">
               <h4>Cricket Betting App without your browser</h4>
-              <button id="reasonsButtonOne">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -415,9 +449,9 @@
             </div>
           </div>
           <div class="main__reasons_item">
-            <div class="main__reasons_title">
+            <div id="reasonsButtonTwo" class="main__reasons_title">
               <h4>Only Phone Needed</h4>
-              <button id="reasonsButtonTwo">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -430,9 +464,9 @@
             </div>
           </div>
           <div class="main__reasons_item">
-            <div class="main__reasons_title">
+            <div id="reasonsButtonThree" class="main__reasons_title">
               <h4>Easy to track your balance</h4>
-              <button id="reasonsButtonThree">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -445,9 +479,9 @@
             </div>
           </div>
           <div class="main__reasons_item">
-            <div class="main__reasons_title">
+            <div id="reasonsButtonFour" class="main__reasons_title">
               <h4>Bets at any time</h4>
-              <button id="reasonsButtonFour">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -510,9 +544,9 @@
             <h2>How to use our IPL betting app?</h2>
           </div>
           <div class="main__how-use_item">
-            <div class="main__how-use_title">
+            <div id="how-use_button-1" class="main__how-use_title">
               <h4>How to sign up in the app?</h4>
-              <button id="how-use_button-1">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -526,9 +560,9 @@
             </div>
           </div>
           <div class="main__how-use_item">
-            <div class="main__how-use_title">
+            <div id="how-use_button-2" class="main__how-use_title">
               <h4>How to deposit money in the app?</h4>
-              <button id="how-use_button-2">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -543,9 +577,9 @@
             </div>
           </div>
           <div class="main__how-use_item">
-            <div class="main__how-use_title">
+            <div id="how-use_button-3" class="main__how-use_title">
               <h4>How to find IPL matches to bet?</h4>
-              <button id="how-use_button-3">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -777,9 +811,9 @@
             <h2>FAQ</h2>
           </div>
           <div class="main__faq_item">
-            <div class="main__faq_title">
+            <div id="faqButtonOne" class="main__faq_title">
               <h4>How to sign up in the app?</h4>
-              <button id="faqButtonOne">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -793,9 +827,9 @@
             </div>
           </div>
           <div class="main__faq_item">
-            <div class="main__faq_title">
+            <div id="faqButtonTwo" class="main__faq_title">
               <h4>How to sign up in the app?</h4>
-              <button id="faqButtonTwo">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -809,9 +843,9 @@
             </div>
           </div>
           <div class="main__faq_item">
-            <div class="main__faq_title">
+            <div id="faqButtonThree" class="main__faq_title">
               <h4>How to sign up in the app?</h4>
-              <button id="faqButtonThree">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -825,9 +859,9 @@
             </div>
           </div>
           <div class="main__faq_item">
-            <div class="main__faq_title">
+            <div id="faqButtonFour" class="main__faq_title">
               <h4>How to sign up in the app?</h4>
-              <button id="faqButtonFour">
+              <button>
                 <img src="./img/majesticons_plus.png" alt="" />
               </button>
             </div>
@@ -865,19 +899,24 @@
           </div>
         </div>
         <div class="footer__variable_items">
-          <a href="#" class="footer__variable_item">Odds96</a>
-          <a href="#" class="footer__variable_item">Casino</a>
-          <a href="#" class="footer__variable_item">Aviator</a>
-          <a href="#" class="footer__variable_item">Cricket</a>
-          <a href="#" class="footer__variable_item">Bonuses</a>
-          <a href="#" class="footer__variable_item">App</a>
-          <a href="#" class="footer__variable_item">Reviews</a>
-          <a href="#" class="footer__variable_item">Legal</a>
-          <a href="#" class="footer__variable_item">Support</a>
-          <a href="#" class="footer__variable_item">Help</a>
+          <div class="footer__variable_item">
+            <a href="#">Odds96</a>
+            <a href="#">Casino</a>
+            <a href="#">Aviator</a>
+            <a href="#">Cricket</a>
+            <a href="#">Bonuses</a>
+            <a href="#">App</a>
+          </div>
+          <div class="footer__variable_item">
+            <a href="#">Reviews</a>
+            <a href="#">Legal</a>
+            <a href="#">Support</a>
+            <a href="#">Help</a>
+          </div>
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

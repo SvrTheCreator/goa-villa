@@ -1,142 +1,224 @@
+const nav = document.querySelector('.mobile-nav')
+const svgBurger = document.querySelector('svg')
+
 function mobileNav() {
   const navBtn = document.querySelector('.header__burger-menu')
-  const nav = document.querySelector('.mobile-nav')
-
   navBtn.onclick = function () {
     nav.classList.toggle('mobile-nav--open')
+    svgBurger.classList.toggle('burger-active')
     document.body.classList.toggle('no-scroll')
   }
 }
 mobileNav()
 function forReasons() {
   const forReasonsButtonOne = document.querySelector('#forReasonsButtonOne')
-  const reasonsButtonOne = (document.querySelector(
-    '#reasonsButtonOne'
-  ).onclick = function () {
+  const reasonsButtonOne = document.querySelector('#reasonsButtonOne')
+  reasonsButtonOne.onclick = function () {
     forReasonsButtonOne.classList.toggle('main__reasons_text-active')
-  })
+  }
   const forReasonsButtonTwo = document.querySelector('#forReasonsButtonTwo')
-  const reasonsButtonTwo = (document.querySelector(
-    '#reasonsButtonTwo'
-  ).onclick = function () {
+  const reasonsButtonTwo = document.querySelector('#reasonsButtonTwo')
+  reasonsButtonTwo.onclick = function () {
     forReasonsButtonTwo.classList.toggle('main__reasons_text-active')
-  })
+  }
   const forReasonsButtonThree = document.querySelector('#forReasonsButtonThree')
-  const reasonsButtonThree = (document.querySelector(
-    '#reasonsButtonThree'
-  ).onclick = function () {
+  const reasonsButtonThree = document.querySelector('#reasonsButtonThree')
+  reasonsButtonThree.onclick = function () {
     forReasonsButtonThree.classList.toggle('main__reasons_text-active')
-  })
+  }
   const forReasonsButtonFour = document.querySelector('#forReasonsButtonFour')
-  const reasonsButtonFour = (document.querySelector(
-    '#reasonsButtonFour'
-  ).onclick = function () {
+  const reasonsButtonFour = document.querySelector('#reasonsButtonFour')
+  reasonsButtonFour.onclick = function () {
     forReasonsButtonFour.classList.toggle('main__reasons_text-active')
-  })
+  }
 }
 forReasons()
 function forHowToUse() {
   const textForHowUseOne = document.querySelector('#forHow-use_button-1')
-  const buttonForHowUseOne = (document.querySelector(
-    '#how-use_button-1'
-  ).onclick = function () {
-    textForHowUseOne.classList.toggle('main__reasons_text-active')
-  })
+  const buttonForHowUseOne = document.querySelector('#how-use_button-1')
+  buttonForHowUseOne.onclick = function () {
+    textForHowUseOne.classList.toggle('main__how-use_text-active')
+  }
   const textForHowUseTwo = document.querySelector('#forHow-use_button-2')
-  const buttonForHowUseTwo = (document.querySelector(
-    '#how-use_button-2'
-  ).onclick = function () {
-    textForHowUseTwo.classList.toggle('main__reasons_text-active')
-  })
+  const buttonForHowUseTwo = document.querySelector('#how-use_button-2')
+  buttonForHowUseTwo.onclick = function () {
+    textForHowUseTwo.classList.toggle('main__how-use_text-active')
+  }
   const textForHowUseThree = document.querySelector('#forHow-use_button-3')
-  const buttonForHowUseThree = (document.querySelector(
-    '#how-use_button-3'
-  ).onclick = function () {
-    textForHowUseThree.classList.toggle('main__reasons_text-active')
-  })
-  const forFaqButtonOne = document.querySelector('#forFaqButtonOne')
-  const faqButtonOne = (document.querySelector('#faqButtonOne').onclick =
-    () => {
-      forFaqButtonOne.classList.toggle('main__faq_text-active')
-    })
-  const forFaqButtonTwo = document.querySelector('#forFaqButtonTwo')
-  const faqButtonTwo = (document.querySelector('#faqButtonTwo').onclick =
-    () => {
-      forFaqButtonTwo.classList.toggle('main__faq_text-active')
-    })
-  const forFaqButtonThree = document.querySelector('#forFaqButtonThree')
-  const faqButtonThree = (document.querySelector('#faqButtonThree').onclick =
-    () => {
-      forFaqButtonThree.classList.toggle('main__faq_text-active')
-    })
-  const forFaqButtonFour = document.querySelector('#forFaqButtonFour')
-  const faqButtonFour = (document.querySelector('#faqButtonFour').onclick =
-    () => {
-      forFaqButtonFour.classList.toggle('main__faq_text-active')
-    })
+  const buttonForHowUseThree = document.querySelector('#how-use_button-3')
+  buttonForHowUseThree.onclick = function () {
+    textForHowUseThree.classList.toggle('main__how-use_text-active')
+  }
 }
 forHowToUse()
+function forFaq() {
+  const forFaqButtonOne = document.querySelector('#forFaqButtonOne')
+  const faqButtonOne = document.querySelector('#faqButtonOne')
+  faqButtonOne.onclick = () => {
+    forFaqButtonOne.classList.toggle('main__faq_text-active')
+  }
+  const forFaqButtonTwo = document.querySelector('#forFaqButtonTwo')
+  const faqButtonTwo = document.querySelector('#faqButtonTwo')
+  faqButtonTwo.onclick = () => {
+    forFaqButtonTwo.classList.toggle('main__faq_text-active')
+  }
+  const forFaqButtonThree = document.querySelector('#forFaqButtonThree')
+  const faqButtonThree = document.querySelector('#faqButtonThree')
+  faqButtonThree.onclick = () => {
+    forFaqButtonThree.classList.toggle('main__faq_text-active')
+  }
+  const forFaqButtonFour = document.querySelector('#forFaqButtonFour')
+  const faqButtonFour = document.querySelector('#faqButtonFour')
+  faqButtonFour.onclick = () => {
+    forFaqButtonFour.classList.toggle('main__faq_text-active')
+  }
+}
+forFaq()
+
+const homeContent = document.querySelector('.header__content')
+const indianPremierLeague = document.querySelector('.main__indian-league')
+const iplAppDownload = document.querySelector('.main__betting-app')
+const iplCricketBetting = document.querySelector('.main__live-betting')
+const welcomeBonus = document.querySelector('.main__bonuses')
+const howToUse = document.querySelector('.main__how-use')
+const reviews = document.querySelector('.main__reviews')
+const reasonsToDownload = document.querySelector('.main__reasons')
+const iplmobilefeatures = document.querySelector('.main__mobile-app')
+const mainInformation = document.querySelector('.main__information')
+const iplPredictionApp = document.querySelector('.main__download')
+const faq = document.querySelector('.main__faq')
+
+function reuseScroll(params) {
+  params.scrollIntoView({ block: 'center', behavior: 'smooth' })
+}
+
+function headerScrollFromItem() {
+  const buttonForHomeContent = document.querySelector('#headerHome')
+  buttonForHomeContent.onclick = () => {
+    reuseScroll(homeContent)
+  }
+  const buttonForHeaderDownload = document.querySelector('#headerDownload')
+  buttonForHeaderDownload.onclick = () => {
+    reuseScroll(iplAppDownload)
+  }
+  const buttonForHeaderBonus = document.querySelector('#headerBonus')
+  buttonForHeaderBonus.onclick = () => {
+    reuseScroll(welcomeBonus)
+  }
+  const buttonForHeaderHowToUse = document.querySelector('#headerHowToUse')
+  buttonForHeaderHowToUse.onclick = () => {
+    reuseScroll(howToUse)
+  }
+  const buttonForHeaderReviews = document.querySelector('#headerReviews')
+  buttonForHeaderReviews.onclick = () => {
+    reuseScroll(reviews)
+  }
+  const buttonForHeaderFaq = document.querySelector('#headerFaq')
+  buttonForHeaderFaq.onclick = () => {
+    reuseScroll(faq)
+  }
+}
+headerScrollFromItem()
+
+function reuseUtils() {
+  document.body.classList.remove('no-scroll')
+  svgBurger.classList.remove('burger-active')
+}
+
+function mobileHeaderScrollFromItem() {
+  const buttonForHomeContent = document.querySelector('#mobileHeaderHome')
+  buttonForHomeContent.onclick = () => {
+    nav.classList.remove('mobile-nav--open')
+    reuseUtils()
+    homeContent.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }
+  const buttonForHeaderDownload = document.querySelector(
+    '#mobileHeaderIplDownload'
+  )
+  buttonForHeaderDownload.onclick = () => {
+    nav.classList.remove('mobile-nav--open')
+    reuseUtils()
+    reuseScroll(iplAppDownload)
+  }
+  const buttonForHeaderBonus = document.querySelector('#mobileHeaderBonus')
+  buttonForHeaderBonus.onclick = () => {
+    nav.classList.remove('mobile-nav--open')
+    reuseUtils()
+    reuseScroll(welcomeBonus)
+  }
+  const buttonForHeaderHowToUse = document.querySelector(
+    '#mobileHeaderHowToUse'
+  )
+  buttonForHeaderHowToUse.onclick = () => {
+    nav.classList.remove('mobile-nav--open')
+    reuseUtils()
+    reuseScroll(howToUse)
+  }
+  const buttonForHeaderReviews = document.querySelector('#mobileHeaderReviews')
+  buttonForHeaderReviews.onclick = () => {
+    nav.classList.remove('mobile-nav--open')
+    reuseUtils()
+    reuseScroll(reviews)
+  }
+  const buttonForHeaderFaq = document.querySelector('#mobileHeaderFaq')
+  buttonForHeaderFaq.onclick = () => {
+    nav.classList.remove('mobile-nav--open')
+    reuseUtils()
+    reuseScroll(faq)
+  }
+}
+mobileHeaderScrollFromItem()
 
 function scrollFromItem() {
-  const indianPremierLeague = document.querySelector('.main__indian-league')
   const scrollFromIndianPremierLeague = document.querySelector(
     '#indianPremierLeague'
   )
   scrollFromIndianPremierLeague.onclick = () => {
-    indianPremierLeague.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(indianPremierLeague)
   }
-  const iplAppDownload = document.querySelector('.main__betting-app')
   const scrollFromiplAppDownload = document.querySelector('#iplAppDownload')
   scrollFromiplAppDownload.onclick = () => {
-    iplAppDownload.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(iplAppDownload)
   }
-  const iplCricketBetting = document.querySelector('.main__live-betting')
   const scrollFromiplCricketBetting =
     document.querySelector('#iplCricketBetting')
   scrollFromiplCricketBetting.onclick = () => {
-    iplCricketBetting.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(iplCricketBetting)
   }
-  const welcomeBonus = document.querySelector('.main__bonuses')
   const scrollFromwelcomeBonus = document.querySelector('#welcomeBonus')
   scrollFromwelcomeBonus.onclick = () => {
-    welcomeBonus.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(welcomeBonus)
   }
-  const reasonsToDownload = document.querySelector('.main__reasons')
   const scrollFromreasonsToDownload =
     document.querySelector('#reasonsToDownload')
   scrollFromreasonsToDownload.onclick = () => {
-    reasonsToDownload.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(reasonsToDownload)
   }
-  const iplmobilefeatures = document.querySelector('.main__mobile-app')
   const scrollFromiplmobilefeatures =
     document.querySelector('#iplmobilefeatures')
   scrollFromiplmobilefeatures.onclick = () => {
-    iplmobilefeatures.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(iplmobilefeatures)
   }
-  const howToUse = document.querySelector('.main__how-use')
   const scrollFromhowToUse = document.querySelector('#howToUse')
   scrollFromhowToUse.onclick = () => {
-    howToUse.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(howToUse)
   }
-  const reviews = document.querySelector('.main__reviews')
+
   const scrollFromreviews = document.querySelector('#reviews')
   scrollFromreviews.onclick = () => {
-    reviews.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(reviews)
   }
-  const mainInformation = document.querySelector('.main__information')
   const scrollFrommainInformation = document.querySelector('#mainInformation')
   scrollFrommainInformation.onclick = () => {
-    mainInformation.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(mainInformation)
   }
-  const iplPredictionApp = document.querySelector('.main__download')
   const scrollFromiplPredictionApp = document.querySelector('#iplPredictionApp')
   scrollFromiplPredictionApp.onclick = () => {
-    iplPredictionApp.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(iplPredictionApp)
   }
-  const faq = document.querySelector('.main__faq')
   const scrollFromfaq = document.querySelector('#faq')
   scrollFromfaq.onclick = () => {
-    faq.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    reuseScroll(faq)
   }
 }
 scrollFromItem()
