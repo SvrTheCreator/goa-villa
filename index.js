@@ -223,63 +223,160 @@ function scrollFromItem() {
 }
 scrollFromItem()
 
-function scrollForLiveBet() {
-  const divScroll = document.querySelector('.main__live-betting_items')
-  const leftLiveScrollButton = document.querySelector(
-    '.main__live-betting_left-button'
-  )
-  const rightLiveScrollButton = document.querySelector(
-    '.main__live-betting_right-button'
-  )
-
-  leftLiveScrollButton.onclick = () => {
-    divScroll.scrollLeft -= 500
+function hideButtonsForLiveBetting(currentSwiper) {
+  let buttonLeft = document.querySelector('.main__live-betting_left-button')
+  let buttonRight = document.querySelector('.main__live-betting_right-button')
+  if (currentSwiper.on('reachBeginning')) {
+    buttonLeft.style.opacity = '0'
   }
-
-  rightLiveScrollButton.onclick = () => {
-    divScroll.scrollLeft += 500
-  }
+  currentSwiper.on('reachBeginning', function () {
+    buttonLeft.style.opacity = '0'
+    buttonRight.style.opacity = '1'
+  })
+  currentSwiper.on('fromEdge', function () {
+    buttonLeft.style.opacity = '1'
+    buttonRight.style.opacity = '1'
+  })
+  currentSwiper.on('reachEnd', function () {
+    buttonRight.style.opacity = '0'
+    buttonLeft.style.opacity = '1'
+  })
 }
-scrollForLiveBet()
 
-function scrollForReviewers() {
-  const divScrollForReviewers = document.querySelector('.main__reviewers')
-  const leftReviewsButton = document.querySelector('#main__reviews_leftButton')
-  const rightReviewsButton = document.querySelector(
-    '#main__reviews_rightButton'
-  )
-
-  leftReviewsButton.onclick = () => {
-    divScrollForReviewers.scrollLeft -= 500
-  }
-
-  rightReviewsButton.onclick = () => {
-    divScrollForReviewers.scrollLeft += 500
-  }
+function sliderForLiveBetting() {
+  const swiper = new Swiper('.main__live-betting_items', {
+    direction: 'horizontal',
+    loop: false,
+    freeMode: true,
+    spaceBetween: 20,
+    allowTouchMove: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    setWrapperSize: true,
+    breakpoints: {
+      430: {
+        slidesPerView: 1,
+      },
+      600: {
+        slidesPerView: 1.5,
+      },
+      900: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 2,
+      },
+      1338: {
+        slidesPerView: 2.5,
+        draggable: true,
+      },
+    },
+    navigation: {
+      nextEl: '.main__live-betting_right-button',
+      prevEl: '.main__live-betting_left-button',
+    },
+  })
+  hideButtonsForLiveBetting(swiper)
 }
-scrollForReviewers()
-function scrollForIndianLeague() {
-  const divScrollForIndian = document.querySelector(
-    '.main__indian-league_items'
-  )
-  const leftIndianButton = document.querySelector('#indianButtonLeft')
-  const rightIndianButton = document.querySelector('#indianButtonRight')
+sliderForLiveBetting()
+
+function hideButtonsForReviewers(currentSwiper) {
+  let buttonLeft = document.querySelector('#main__reviews_leftButton')
+  let buttonRight = document.querySelector('#main__reviews_rightButton')
+  if (currentSwiper.on('reachBeginning')) {
+    buttonLeft.style.opacity = '0'
+  }
+  currentSwiper.on('reachBeginning', function () {
+    buttonLeft.style.opacity = '0'
+    buttonRight.style.opacity = '1'
+  })
+  currentSwiper.on('fromEdge', function () {
+    buttonLeft.style.opacity = '1'
+    buttonRight.style.opacity = '1'
+  })
+
+  currentSwiper.on('reachEnd', function () {
+    buttonRight.style.opacity = '0'
+    buttonLeft.style.opacity = '1'
+  })
+}
+
+function sliderForReviewers() {
+  const swiper = new Swiper('.main__reviewers', {
+    direction: 'horizontal',
+    loop: false,
+    freeMode: true,
+    spaceBetween: 20,
+    allowTouchMove: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    breakpoints: {
+      430: {
+        slidesPerView: 1.2,
+      },
+      600: {
+        slidesPerView: 1.2,
+      },
+      900: {
+        slidesPerView: 1.3,
+      },
+      1200: {
+        slidesPerView: 1.3,
+      },
+      1338: {
+        slidesPerView: 1.45,
+      },
+    },
+    navigation: {
+      nextEl: '#main__reviews_rightButton',
+      prevEl: '#main__reviews_leftButton',
+    },
+  })
+  hideButtonsForReviewers(swiper)
+}
+sliderForReviewers()
+
+function hideButtonsForIndianLeague(currentSwiper) {
   const leftIndianSlider = document.querySelector(
     '.main__indian-league_content_slider-first'
   )
   const rightIndianSlider = document.querySelector(
     '.main__indian-league_content_slider-second'
   )
-
-  leftIndianButton.onclick = () => {
+  let buttonLeft = document.querySelector('#indianButtonLeft')
+  let buttonRight = document.querySelector('#indianButtonRight')
+  if (currentSwiper.on('reachBeginning')) {
+    buttonLeft.style.opacity = '0'
+  }
+  currentSwiper.on('reachBeginning', function () {
+    buttonLeft.style.opacity = '0'
+    buttonRight.style.opacity = '1'
     rightIndianSlider.classList.remove('indian-slider-active')
     leftIndianSlider.classList.add('indian-slider-active')
-    divScrollForIndian.scrollLeft -= 800
-  }
-  rightIndianButton.onclick = () => {
+  })
+  currentSwiper.on('reachEnd', function () {
+    buttonRight.style.opacity = '0'
+    buttonLeft.style.opacity = '1'
     leftIndianSlider.classList.remove('indian-slider-active')
     rightIndianSlider.classList.add('indian-slider-active')
-    divScrollForIndian.scrollLeft += 800
-  }
+  })
 }
-scrollForIndianLeague()
+
+function sliderForIndianLeague() {
+  const swiper = new Swiper('.main__indian-league_items', {
+    direction: 'horizontal',
+    loop: false,
+    freeMode: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: '#indianButtonRight',
+      prevEl: '#indianButtonLeft',
+    },
+  })
+  hideButtonsForIndianLeague(swiper)
+}
+sliderForIndianLeague()
